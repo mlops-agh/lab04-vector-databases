@@ -6,7 +6,15 @@ dataset = load_dataset("FronkonGames/steam-games-dataset")
 columns = dataset["train"].features
 print(columns)
 
-columns_to_keep = ["name", "windows", "linux", "mac", "detailed_description", "supported_languages", "price"]
+columns_to_keep = [
+    "name",
+    "windows",
+    "linux",
+    "mac",
+    "detailed_description",
+    "supported_languages",
+    "price",
+]
 
 N = 40000
 dataset = dataset["train"].select_columns(columns_to_keep).select(range(N))

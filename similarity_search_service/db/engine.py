@@ -5,6 +5,7 @@ from sqlalchemy.engine import URL
 
 from functools import cache
 
+
 def get_db_url() -> URL:
     return URL.create(
         drivername="postgresql+psycopg",

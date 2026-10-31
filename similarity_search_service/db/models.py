@@ -18,9 +18,10 @@ class Images(Base):
     # output of the sentence transformer model
     image_embedding: Mapped[list[float]] = mapped_column(Vector(VECTOR_LENGTH))
 
+
 class Games(Base):
     __tablename__ = "games"
-    __table_args__ = {'extend_existing': True}
+    __table_args__ = {"extend_existing": True}
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(256))
@@ -33,4 +34,6 @@ class Games(Base):
     mac: Mapped[bool] = mapped_column(Boolean)
 
     price: Mapped[float] = mapped_column(Float)
-    game_description_embedding: Mapped[list[float]] = mapped_column(Vector(VECTOR_LENGTH))
+    game_description_embedding: Mapped[list[float]] = mapped_column(
+        Vector(VECTOR_LENGTH)
+    )
