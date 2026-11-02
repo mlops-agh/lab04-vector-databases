@@ -1,12 +1,6 @@
-from datasets import load_dataset
+from datasets import Dataset, load_dataset
 
-dataset = load_dataset("FronkonGames/steam-games-dataset")
-
-# get columns names and types
-columns = dataset["train"].features
-print(columns)
-
-columns_to_keep = [
+COLUMNS_TO_KEEP = [
     "name",
     "windows",
     "linux",
@@ -16,5 +10,8 @@ columns_to_keep = [
     "price",
 ]
 
-N = 40000
-dataset = dataset["train"].select_columns(columns_to_keep).select(range(N))
+
+def load_games(n: int) -> Dataset:
+    """Load the first `n` rows of the Steam games dataset with only the columns we need."""
+    dataset = load_dataset("FronkonGames/steam-games-dataset")["train"]
+    return dataset.select_columns(COLUMNS_TO_KEEP).select(range(n))

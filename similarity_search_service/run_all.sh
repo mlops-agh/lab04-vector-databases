@@ -5,4 +5,4 @@ cd "$(dirname "$0")"
 
 uv run python -m scripts.create_tables
 uv run python -m scripts.seed_images
-uv run python -m scripts.load_games
+uv run python -m scripts.seed_games
