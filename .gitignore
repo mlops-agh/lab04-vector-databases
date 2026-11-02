@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data
+rag/data/
+milvus_db/volumes/
+milvus_db/volumes/minio
