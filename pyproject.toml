@@ -16,6 +16,7 @@ dependencies = [
     "pandas>=2.2.3",
     "pgvector>=0.4.0",
     "pillow>=11.1.0",
+    "polars>=2.1.0",
     "pre-commit>=4.7.0",
     "psycopg[binary]>=3.3.6",
     "pymilvus>=2.5.6",

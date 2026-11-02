@@ -223,3 +223,6 @@ __marimo__/
 rag/data/
 milvus_db/volumes/
 milvus_db/volumes/minio
+# Homework dataset
+homework/data/
+image_paths.txt
